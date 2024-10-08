@@ -1,3 +1,183 @@
-h1 {
-    color: aqua;
+@font-face {
+    font-family: 'norsebold';
+    src: url('./fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('./fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html,
+body {
+    background: #0e0e0e;
+    --color-primary: white;
+    --color-secondary: #596d48;
+    --color-tertiary: #1f2937;
+    --color-focus: #1d4ed8;
+    --color-invalid: #b91c1c;
+    --background-one: #f9fafb;
+    --background-two: #ffffff;
+    --norse-font: 'norsebold';
+    height: 100%;
+}
+
+.box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex: 1 1 auto;
+    background: white;
+    width: 70vw;
+}
+
+/* Styling for left side */
+
+.leaf {
+    background-image: url(./halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+
+    position: relative;
+}
+
+.odin-logo {
+    position: relative;
+    top: 200px;
+    display: flex;
+    align-items: center;
+    height: 150px;
+    width: 508px;
+    background: rgb(14,14,14, 0.4);
+}
+
+img {
+    transform: scale(0.3);
+}
+
+.odin-logo > p {
+    position: relative;
+    right: 140px;
+    font-size: 70px;
+    color: var(--color-primary);
+    font-family: var(--norse-font);
+}
+
+.credit-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 140px;
+}
+
+.credit-footer,
+.credit-footer > a {
+    color: var(--color-primary);
+    font-size: 14px;
+}
+
+/* Styling for right side */
+
+.form-container {
+    position: relative;
+    top: 100px;
+    background-color: var(--background-one);
+}
+
+.form-text {
+    margin-left: 40px;
+    margin-bottom: 70px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+.form-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    background-color: var(--background-two);
+    gap: 10px;
+    font-size: 22px;
+    color: var(--color-tertiary);
+    box-shadow: 0px 4px 2px #dddedf;
+}
+
+h2 {
+    margin-left: 40px;
+    font-size: 22px;
+}
+.personal-details {
+    margin-left: 40px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+
+
+    font-size: 12px;
+}
+
+label {
+    display: inline-block;
+}
+
+.form-row {
+    box-sizing: border-box;
+    width: 270px;
+}
+
+div label {
+    width: 100%;
+}
+
+input {
+    border: 1px solid #999;
+}
+
+input:focus {
+    outline: thin inset var(--color-focus);
+    border: 1px solid var(--color-focus);
+    box-shadow: 1px 2px 2px var(--color-focus);
+}
+
+input:invalid {
+    border: 1px solid var(--color-invalid);
+}
+
+.form-button {
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.form-button button {
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #FFFFFF;
+    background-color: var(--color-secondary);
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 10px 40px;
+    cursor: pointer;
+
+    box-shadow: 0px 4px 2px #dddedf;
+}
+
+form > span {
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+form > span > a {
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-decoration: none;
 }
